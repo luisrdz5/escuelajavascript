@@ -32,6 +32,7 @@ body {
     cursor:pointer;
     transition: 450ms all;
     transform-origin: center left;
+    position: relative;
 }
 .carousel-item:hover ~ .carousel-item {
     transform: translate3d(100px , 0 ,0 );
@@ -43,6 +44,26 @@ body {
     transform: scale(1.5);
     opacity: 1;
 }
+.carousel-item__img{
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+}
+.carousel-item__details{
+    background: linear-gradient(to top, rgba(0,0,0,0.9),  rgba(0,0,0,0),100%);
+    font-size: 10px;
+    opacity: 0;
+    transition: 450ms opacity;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+}
+.carousel-item__details:hover {
+    opacity: 1;
+}
 </style>
 <body>
     <section class="carousel">
@@ -50,8 +71,8 @@ body {
             <div class="carousel-item">
                 <img class="carousel-item__img" src="./images/adults-alcohol-alcoholic-beverage-1304473.jpg" alt="people">
                 <div class="carousel-item__details">
-                    <img src="" alt="">
-                    <img src="" alt="">
+                    <img src="./icons/play.png" alt="play">
+                    <img src="./icons/plus.png" alt="plus">
                 </div>
                 <p class="carousel-item__details--title">
                     Título Descriptivo
