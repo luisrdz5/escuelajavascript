@@ -4,17 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
   <title>Header</title>
 </head>
 <style>
   body {
     margin: 0px;
     background-color: #21C08B;
+    font-family: 'Muli', sans-serif;
   }
   .header {
     background-color: #21C08B;
     width: 100%;
     height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   .header__img {
     width: 200px;
@@ -25,17 +30,40 @@
       margin-right: 30px;
   }
   .header__menu ul {
-      /*display: none;*/
+      display: none;
       list-style: none;
       padding: 0px;
       position: absolute;
-      width: 100px;
+      width: 120px;
       text-align: right;
       margin: 0px 0px 0px -14px;
   }
+  .header__menu:hover ul, ul:hover{
+    display: block;
+  }
+  .header__menu li {
+    margin: 10px 10px;
+  }
+  .header__menu li a {
+    color: white;
+    text-decoration: none;
+  }
+  .header__menu li a:hover {
+    text-decoration: underline;
+  }
   .header__menu--profile {
       margin-right: 8px;
-      width: 40px;
+      display: flex;
+      align-items: center;
+  }
+  .header__menu--profile img {
+      margin-right: 8px;
+      width: 40 px;
+  }
+  .header__menu--profile p {
+      margin: 0px;
+      color: white;
+
   }
   
 </style>
@@ -45,7 +73,7 @@
     <div class="header__menu">
         <div class="header__menu--profile">
             <img src="./user-icon.png" alt="User">
-            Perfil
+            <p> Perfil </p> 
         </div>
         <ul>
             <li><a href="/">Cuenta</a></li>
